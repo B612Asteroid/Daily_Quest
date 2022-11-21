@@ -1,3 +1,3 @@
-export default function Potato() {
+export default function AboutAs() {
     return "about us";
 }
