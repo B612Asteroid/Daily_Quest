@@ -7,12 +7,25 @@ export default function NavBar() {
     console.log(router);
     return (
         <nav>
-            <Link href="/" className={`${styles.link} ${router.locale === "/" ? styles.active : ""}`}>
+            <Link href="/" className={router.pathname === "/" ? "active" : ""}>
                 Home
             </Link>
-            <Link href="/about" className={`${styles.link} ${router.locale === "/about" ? styles.active : ""}`}>
+            <Link href="/about" className={router.pathname === "/about" ? "active" : ""}>
                 About
             </Link>
+            <style jsx>
+                {`
+                    nav{
+                        background-color: tomato;
+                    }
+                    a {
+                        text-decoration:none;
+                    }
+                    .active {
+                        color : yellow;
+                    }
+                `}
+            </style>
         </nav>
     )
 }
